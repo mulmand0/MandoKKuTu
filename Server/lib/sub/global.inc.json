@@ -8,7 +8,7 @@
 	"PG_USER": "postgres",
 	"PG_PASSWORD": "Your PostgreSQL Password Here",
 	"PG_PORT": 5432,
-	"PG_DATABASE": "main",
+	"PG_DATABASE": "kkutu",
 	"GOOGLE_RECAPTCHA_TO_GUEST": false,
 	"GOOGLE_RECAPTCHA_TO_USER": false,
 	"GOOGLE_RECAPTCHA_SITE_KEY": "Your Google Recaptcha site key Here",
