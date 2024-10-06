@@ -66,12 +66,12 @@ Server.set('view engine', "pug");
 Server.use(Express.static(__dirname + "/public"));
 Server.use(Parser.urlencoded({ extended: true }));
 Server.use(Exession({
-	/* use only for redis-installed
 
 	store: new Redission({
 		client: Redis.createClient(),
 		ttl: 3600 * 12
-	}),*/
+	}),
+
 	secret: 'kkutu',
 	resave: false,
 	saveUninitialized: true
@@ -98,7 +98,7 @@ Server.use((req, res, next) => {
 	}
 });
 //볕뉘 수정 끝
-/* use this if you want
+
 
 DDDoS = new DDDoS({
 	maxWeight: 6,
@@ -115,7 +115,7 @@ DDDoS = new DDDoS({
 DDDoS.rules[0].logFunction = DDDoS.rules[1].logFunction = function(ip, path){
 	JLog.warn(`DoS from IP ${ip} on ${path}`);
 };
-Server.use(DDDoS.express());*/
+Server.use(DDDoS.express());
 
 WebInit.init(Server, true);
 DB.ready = function(){
